@@ -13,6 +13,7 @@
 .slider {
  height: 75vh;
  margin-top: 10vh;
+ position: relative;
 }
 
 .image-list{
@@ -33,3 +34,23 @@
 .show{
     display: block;
 }
+
+.carousel-navigation{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 50%;
+    color: rgb(213, 245, 245);
+    font-size: 40px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+#next-btn{
+    top: 0;
+}
+
+#prev-btn{
+    bottom: 0;
+}
+
