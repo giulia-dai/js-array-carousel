@@ -17,8 +17,51 @@ imageListDom.innerHTML = sliderContent;
 const wrapperDom = document.getElementsByClassName('wrapper');
 console.log(wrapperDom);
 
-const activeImage = 0; //0 relativo alla posizione nell'array. 
+let activeImage = 0; //0 relativo alla posizione nell'array. 
 
 wrapperDom[activeImage].classList.add('show');  //l'img del primo wrapper sarà sempre visibile.
+
+
+const nextBtnDom = document.querySelector('#next-btn');
+const prevBtnDom = document.querySelector('#prev-btn');
+
+nextBtnDom.addEventListener('click',
+    function () {
+
+        if (activeImage < wrapperDom.length - 1) {
+
+            wrapperDom[activeImage].classList.remove('show');
+
+            activeImage++;
+
+            wrapperDom[activeImage].classList.add('show');
+
+            prevBtnDom.classList.remove('hide');
+
+            if (activeImage == wrapperDom.length - 1) {
+                nextBtnDom.classList.add('hide');
+            }
+        }
+    }
+);
+
+
+prevBtnDom.addEventListener('click',
+
+   function() {
+     if(activeImage > 0){
+        wrapperDom[activeImage].classList.remove('show');
+        activeImage--;
+        wrapperDom[activeImage].classList.add('show')
+
+        nextBtnDom.classList.remove('hide');
+
+        if(activeImage == 0){
+            prevBtnDom.classList.add('hide');
+        }
+     }
+   }
+);
+
 
 
