@@ -16,3 +16,9 @@ imageListDom.innerHTML = sliderContent;
 
 const wrapperDom = document.getElementsByClassName('wrapper');
 console.log(wrapperDom);
+
+const activeImage = 0; //0 relativo alla posizione nell'array. 
+
+wrapperDom[activeImage].classList.add('show');  //l'img del primo wrapper sarà sempre visibile.
+
+
