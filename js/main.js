@@ -39,7 +39,10 @@ nextBtnDom.addEventListener('click',
             prevBtnDom.classList.remove('hide');
 
             if (activeImage == wrapperDom.length - 1) {
+
                 nextBtnDom.classList.add('hide');
+             
+
             }
         }
     }
@@ -48,19 +51,20 @@ nextBtnDom.addEventListener('click',
 
 prevBtnDom.addEventListener('click',
 
-   function() {
-     if(activeImage > 0){
-        wrapperDom[activeImage].classList.remove('show');
-        activeImage--;
-        wrapperDom[activeImage].classList.add('show')
+    function () {
+        if (activeImage > 0) {
+            wrapperDom[activeImage].classList.remove('show');
+            activeImage--;
+            wrapperDom[activeImage].classList.add('show')
 
-        nextBtnDom.classList.remove('hide');
+            nextBtnDom.classList.remove('hide');
 
-        if(activeImage == 0){
-            prevBtnDom.classList.add('hide');
+
+            if (activeImage == 0) {
+                prevBtnDom.classList.add('hide');
+            }
         }
-     }
-   }
+    }
 );
 
 
